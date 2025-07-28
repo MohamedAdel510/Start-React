@@ -1,0 +1,19 @@
+.navbar{
+    background-color: #2C3E50;
+}
+#mohamed{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-item{
+    width: fit-content;
+   
+}
+
+.navbar-nav .nav-link.active{
+    background: #1ABC9C;
+
+
+} 
