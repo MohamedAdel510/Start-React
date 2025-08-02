@@ -19,7 +19,7 @@ export default function Navbar() {
   
   return (
     <>
-        <nav className={"navbar navbar-expand-lg navbar-dark  fixed-top " + (scrolled && "py-4" )}>
+      <nav className={"navbar navbar-expand-lg navbar-dark  fixed-top " + (scrolled && "py-4" )}>
           <div className="container">
             <Link id='mohamed' className="navbar-brand" to="/home">Start Framework</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
