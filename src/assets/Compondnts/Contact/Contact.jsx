@@ -1,17 +1,19 @@
 import React from 'react'
 import { useState } from "react";
+import Input from './Input';
 
 export default function Contact() {
 
-  const inputs = ["userName", "userAge", "userEmail", "userPassword"];
+  const inputs = ["User Name", "Age", "Email", "Password"];
+  // const [float, setfloat] = useState([false, false, false, false]); // dwon
 
-  const [float, setfloat] = useState([false, false, false, false]); // dwon
+  // function test(indx){
+  //   const newFloat = structuredClone(float);
+  //   newFloat[indx] = true;
+  //   setfloat(newFloat);
+  // }
 
-  function test(indx){
-    const newFloat = structuredClone(float);
-    newFloat[indx] = true;
-    setfloat(newFloat);
-  }
+
 
   return (
    <section className='mt-100 py-5'>
@@ -26,16 +28,10 @@ export default function Contact() {
 
         <div className="form">
 
-
-          {inputs.map((inp, indx)=> 
-            <div className="">
-              <label htmlFor={inp} className={'fs-6 text-success ' + (float[indx] ? "floating-up" : "floating-down")}>{inp} </label>
-              <input onKeyUp={() => { test(indx)}} id={inp} type="text" className='form-control my-2  border-0 border-bottom py-3 position-relative ng-valid ng-dirty ng-touched ' placeholder={inp} />
-            </div>
-          )}
-
-  
+          {inputs.map(  (inp, index) =>  <Input  key={index} label = {inp} /> )}
+          
           <button type='submit' className='btn btn-success color mt-4'>Send Message</button>
+          
         </div>
     </div>
    </section>

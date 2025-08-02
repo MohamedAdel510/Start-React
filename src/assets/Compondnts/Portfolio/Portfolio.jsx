@@ -13,6 +13,15 @@ export default function Portfolio() {
   const [display, setdisplay] = useState("d-none");
 
 
+ function hideModal(e){
+  console.log(e.target.tagName);
+
+  if(e.target.tagName!="IMG"){
+    setdisplay("d-none")
+  }
+  
+ }
+
   return (
     <section className='mt-100 py-5'>
       <div className="container ">
@@ -39,9 +48,9 @@ export default function Portfolio() {
         </div>
 
       </div>
+            {/* setdisplay("d-none") */}  
 
-
-      <div onClick={() => {setdisplay("d-none")}} className={ display +" modal-layer position-fixed bg-black bg-opacity-25 top-0 bottom-0 end-0 start-0 d-flex justify-content-center align-items-center"}>
+      <div onClick={(e) => {hideModal(e)}} className={ display +" modal-layer position-fixed bg-black bg-opacity-25 top-0 bottom-0 end-0 start-0 d-flex justify-content-center align-items-center"}>
         {Modal ? <img src={Modal} alt="" className='my-width-for-modal' /> : null}
       </div>
     </section>
