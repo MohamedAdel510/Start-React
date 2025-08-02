@@ -12,7 +12,7 @@ import Portfolio from './assets/Compondnts/Portfolio/Portfolio';
 import Contact from './assets/Compondnts/Contact/Contact'
 import About from './assets/Compondnts/About/About';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {path: "",element: <Layout/>, children: [
     {path: "", element: <Home/>},
     {path: "home", element: <Home/>},
